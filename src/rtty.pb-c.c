@@ -50,30 +50,28 @@ void   rtty_message__free_unpacked
   assert(message->base.descriptor == &rtty_message__descriptor);
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
-static const ProtobufCEnumValue rtty_message__type__enum_values_by_number[8] =
+static const ProtobufCEnumValue rtty_message__type__enum_values_by_number[7] =
 {
   { "UNKNOWN", "RTTY_MESSAGE__TYPE__UNKNOWN", 0 },
   { "LOGIN", "RTTY_MESSAGE__TYPE__LOGIN", 1 },
   { "LOGINACK", "RTTY_MESSAGE__TYPE__LOGINACK", 2 },
   { "LOGOUT", "RTTY_MESSAGE__TYPE__LOGOUT", 3 },
   { "TTY", "RTTY_MESSAGE__TYPE__TTY", 4 },
-  { "ANNOUNCE", "RTTY_MESSAGE__TYPE__ANNOUNCE", 5 },
-  { "UPFILE", "RTTY_MESSAGE__TYPE__UPFILE", 6 },
-  { "DOWNFILE", "RTTY_MESSAGE__TYPE__DOWNFILE", 7 },
+  { "UPFILE", "RTTY_MESSAGE__TYPE__UPFILE", 5 },
+  { "DOWNFILE", "RTTY_MESSAGE__TYPE__DOWNFILE", 6 },
 };
 static const ProtobufCIntRange rtty_message__type__value_ranges[] = {
-{0, 0},{0, 8}
+{0, 0},{0, 7}
 };
-static const ProtobufCEnumValueIndex rtty_message__type__enum_values_by_name[8] =
+static const ProtobufCEnumValueIndex rtty_message__type__enum_values_by_name[7] =
 {
-  { "ANNOUNCE", 5 },
-  { "DOWNFILE", 7 },
+  { "DOWNFILE", 6 },
   { "LOGIN", 1 },
   { "LOGINACK", 2 },
   { "LOGOUT", 3 },
   { "TTY", 4 },
   { "UNKNOWN", 0 },
-  { "UPFILE", 6 },
+  { "UPFILE", 5 },
 };
 const ProtobufCEnumDescriptor rtty_message__type__descriptor =
 {
@@ -82,9 +80,9 @@ const ProtobufCEnumDescriptor rtty_message__type__descriptor =
   "Type",
   "RttyMessage__Type",
   "",
-  8,
+  7,
   rtty_message__type__enum_values_by_number,
-  8,
+  7,
   rtty_message__type__enum_values_by_name,
   1,
   rtty_message__type__value_ranges,
